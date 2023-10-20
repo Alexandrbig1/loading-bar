@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik Bubbles", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #073b4c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar-wrapper {
+  width: 70rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.progress-bar-wrapper h3 {
+  font-size: 5rem;
+  color: #118ab2;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.3);
+  margin-bottom: 3rem;
+}
+
+.change .progress-bar-wrapper h3 {
+  animation: loadingAnim 2s 5;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 3.5rem;
+  border: 0.2rem solid #06d6a0;
+  border-radius: 3rem;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, #ffd166, #ef476f);
+  border-radius: 3rem;
+}
+
+.change .bar {
+  animation: barAnim 10s linear forwards;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 35%;
+  height: 5.5rem;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  border-radius: 5rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.download {
+  background: linear-gradient(to right, #ef476f, #ffd166);
+}
+
+.reset {
+  background: linear-gradient(to right, #ffd166, #06d6a0);
+}
+
+.btn:active {
+  transform: translateY(0.2rem);
+}
+
+@keyframes barAnim {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loadingAnim {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
